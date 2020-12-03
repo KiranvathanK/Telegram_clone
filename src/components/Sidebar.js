@@ -3,7 +3,12 @@ import SearchIcon from '@material-ui/icons/Search';
 import SidebarThread from './SidebarThreads';
 import BorderColorOutlinedIcon from '@material-ui/icons/BorderColorOutlined';
 import './Sidebar.css';
-import { IconButton } from '@material-ui/core'
+import { 
+    PhoneOutlined,
+    QuestionAnswerOutlined,
+    Settings
+} from '@material-ui/icons';
+import {Avatar, IconButton } from '@material-ui/core'
 
 
 const Sidebar = () =>{
@@ -18,9 +23,23 @@ const Sidebar = () =>{
                <BorderColorOutlinedIcon/>
                </IconButton>
            </div>
-           <div className="sidebar__thread"></div>
+           <div className="sidebar__threads">
                     <SidebarThread/>
-           <div className="sidebar__bottom"></div>
+                    <SidebarThread/>
+            </div>
+           <div className="sidebar__bottom">
+                <Avatar/>
+                <IconButton>
+                    <PhoneOutlined/>
+                </IconButton>
+                <IconButton>
+                    <QuestionAnswerOutlined/>
+                </IconButton>
+                <IconButton>
+                    <Settings/>
+                </IconButton>
+
+           </div>
         </div>
     )
 }
